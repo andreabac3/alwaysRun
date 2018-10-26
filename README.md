@@ -6,8 +6,8 @@ alwaysRun will take care of creating logs, handling the error and resuming the e
 How to use
 Just use the following synopsis
   python3 alwaysRun yourCommandBash
-//in any Unix or Windows terminal
-//You need to replace the keyword 'yourCommandBash' with for example "node server.js"
+in any Unix or Windows terminal
+You need to replace the keyword 'yourCommandBash' with for example "node server.js"
 
 Note:
 if your program has to end, that's not what you're looking for
