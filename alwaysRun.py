@@ -4,8 +4,7 @@ import sys
 import subprocess
 args= sys.argv[1:]
 log = True
-is_open = None
-filelog = None
+is_open, filelog = None, None
 try:
   while True:
       pipes = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
