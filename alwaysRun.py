@@ -24,9 +24,3 @@ except KeyboardInterrupt:
   print("\nYou have killed the Demon \n")
   if is_open and log:
     filelog.close
-
-
-
-
-
-
