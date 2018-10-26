@@ -7,7 +7,7 @@ log = True
 fileopen = None
 f = None
 try:
-  while (True):
+  while True:
       pipes = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
       pipes.wait()
       #wait (thread primitive) the end of subprocess.
@@ -21,7 +21,7 @@ try:
         f.close()
         fileopen = False
 except KeyboardInterrupt:
-  print("\nYou have been kill the deamon \n")
+  print("\nYou have killed the Demon \n")
   if fileopen and log:
     f.close
 
