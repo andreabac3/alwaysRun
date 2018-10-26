@@ -4,7 +4,7 @@ import sys
 import subprocess
 args= sys.argv[1:]
 log = True
-fileopen = None
+is_open = None
 filelog = None
 try:
   while True:
@@ -16,13 +16,13 @@ try:
         #if log variable it's true and the subprocess has returned an error  you can append the std error to the log file.
 
         filelog = open("log.txt", "a")
-        fileopen = True
+        is_open = True
         filelog.write(str(std_err.strip()))
         filelog.close()
-        fileopen = False
+        is_open = False
 except KeyboardInterrupt:
   print("\nYou have killed the Demon \n")
-  if fileopen and log:
+  if is_open and log:
     filelog.close
 
 
