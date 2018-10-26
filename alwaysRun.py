@@ -5,7 +5,7 @@ import subprocess
 args= sys.argv[1:]
 log = True
 fileopen = None
-f = None
+filelog = None
 try:
   while True:
       pipes = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -15,15 +15,15 @@ try:
       if  pipes.returncode != 0 and log:
         #if log variable it's true and the subprocess has returned an error  you can append the std error to the log file.
 
-        f = open("log.txt", "a")
+        filelog = open("log.txt", "a")
         fileopen = True
-        f.write(str(std_err.strip()))
-        f.close()
+        filelog.write(str(std_err.strip()))
+        filelog.close()
         fileopen = False
 except KeyboardInterrupt:
   print("\nYou have killed the Demon \n")
   if fileopen and log:
-    f.close
+    filelog.close
 
 
 
