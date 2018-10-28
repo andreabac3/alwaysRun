@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
 
-import sys
 import subprocess
-args= sys.argv[1:]
+from sys import argv
+
+args= argv[1:]
 log = True
-is_open, filelog = None, None
+filelog = None
+stillActive, is_open = False, False #do not touch these variables
 try:
   while True:
       pipes = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+      stillActive = True
+      print("The current pid of subprocess: ", pipes.pid)
       pipes.wait()
+      stillActive = False
       #wait (thread primitive) the end of subprocess.
+      print(pipes.pid)
       std_out, std_err = pipes.communicate()
       if  pipes.returncode != 0 and log:
         #if log variable it's true and the subprocess has returned an error  you can append the std error to the log file.
@@ -21,5 +27,7 @@ try:
         is_open = False
 except KeyboardInterrupt:
   print("\nYou have killed the Demon \n")
-  if is_open and log:
-    filelog.close
+  if is_open and log: filelog.close
+  if stillActive:
+    pipes.terminate()
+    print("The subprocess has been killed\n")
