@@ -22,7 +22,6 @@ try:
         pipes.wait()
         stillActive = False
         # wait (thread primitive) the end of subprocess.
-        print(pipes.pid)
         std_out, std_err = pipes.communicate()
         if pipes.returncode != 0 and log:
             # if log variable it's true and the subprocess has returned an error  you can append the std error to the log file.
