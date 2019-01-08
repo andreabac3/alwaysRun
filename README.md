@@ -3,7 +3,7 @@ Python script for launch in daemon way, software that must always remain running
 AlwaysRun will take care of creating logs, handling the error and resuming the execution of your software.<br/>
 
 
-How to use<br/>
+How to use:<br/>
 Just use the following synopsis:      python3 alwaysRun yourCommandBash <br/>
 You need to replace the keyword 'yourCommandBash' with for example "node server.js"<br/>
 
