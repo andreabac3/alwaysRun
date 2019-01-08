@@ -6,7 +6,7 @@ AlwaysRun will take care of creating logs, handling the error and resuming the e
 
 
 How to use:<br/>
-Just use the following synopsis:      python3 alwaysRun yourCommandBash <br/>
+Just use the following synopsis:      python3 alwaysRun.py yourCommandBash <br/>
 You need to replace the keyword 'yourCommandBash' with for example "node server.js"<br/>
 
 ```sh
