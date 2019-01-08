@@ -7,6 +7,11 @@ How to use<br/>
 Just use the following synopsis:      python3 alwaysRun yourCommandBash <br/>
 You need to replace the keyword 'yourCommandBash' with for example "node server.js"<br/>
 
+```sh
+$ python3 alwaysRun.py node server.js
+The current pid of subprocess: 9741
+```
+
 Note:<br/>
 You can use it in any Unix or Windows terminal<br/>
 If your program has to end, that's not what you're looking for.<br/>
