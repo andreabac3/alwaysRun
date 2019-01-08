@@ -1,4 +1,6 @@
 # alwaysRun
+[![](https://img.shields.io/npm/l/unique-names-generator.svg)](https://github.com/andreasonny83/unique-names-generator/blob/master/LICENSE)
+
 Python script for launch in daemon way, software that must always remain running, such as web servers.<br/>
 AlwaysRun will take care of creating logs, handling the error and resuming the execution of your software.<br/>
 
