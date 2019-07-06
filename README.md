@@ -15,11 +15,13 @@ The current pid of subprocess: 9741
 ```
 
 ### Note:<br/>
-> You can use it in any Unix or Windows terminal<br/>
-> If your program has to end, that's not what you're looking for.<br/>
+## Use Case
+You can use it in any Unix or Windows terminal<br/>
+If your program has to end, that's not what you're looking for.<br/>
 
-> Exit Code (1): <br/>
-> If you find an exit code 1 it means that you have forgotten the argvs, read the paragraph "How to Use" to fix.</br>  
+## Fix error
+Exit Code (1): <br/>
+If you find an exit code 1 it means that you have forgotten the argvs, read the paragraph "How to Use" to fix.</br>  
 
 # Authors
 
